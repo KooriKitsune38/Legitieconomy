@@ -1,0 +1,3 @@
+$execute as @e[type=item_display,tag=k.treasureChest,limit=$(value),sort=random] at @s run function legitieconomy:coins/legitichest/enable_chest
+
+$tellraw @a [{"text":"| ","color":"dark_gray"},{"text":"$(value) Random ","color":"gray"},{"text":"LegitiCoins","color":"gold","hover_event":{"action":"show_text","value":{text:"Look around for Legitichests!",color:"gold"}}},{"text":" just spawned","color":"gray"}]

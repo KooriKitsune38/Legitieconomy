@@ -1,0 +1,2 @@
+scoreboard players operation @s Legiticoins += .temp beg
+tellraw @s [{"text":"You received ","color":"light_purple"},{"score":{"name":".temp","objective":"beg"},"color":"aqua"},{"text":"$","color":"aqua"}," from ",{"selector":"@p[tag=.temp2]","color":"green"}]

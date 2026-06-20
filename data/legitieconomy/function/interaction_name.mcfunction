@@ -1,0 +1,1 @@
+$data merge entity @s {CustomNameVisible:1b,CustomName:[{"text":"Requesting: ","color":"light_purple"},{"text":"$(int)$","color":"aqua"}]}

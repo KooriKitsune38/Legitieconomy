@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "trigger":{
+            "trigger": "player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "type":"player"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "legitieconomy:coins/pvp/player_killed_player"
+    }
+}

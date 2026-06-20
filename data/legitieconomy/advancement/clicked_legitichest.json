@@ -1,0 +1,31 @@
+{
+    "criteria": {
+        "trigger": {
+            "trigger": "default_block_use",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "location_check",
+                        "predicate": {
+                            "block": {
+                                "blocks": "chest",
+                                "nbt": {
+                                    "lock": {
+                                        "components": {
+                                            "minecraft:custom_data": {
+                                                "legitichest": true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "legitieconomy:coins/legitichest/found_chest"
+    }
+}
