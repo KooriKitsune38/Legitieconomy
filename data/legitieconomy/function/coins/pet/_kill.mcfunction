@@ -6,3 +6,6 @@ execute if entity @s[tag=le.petBlahaj] run playsound minecraft:entity.cat.beg_fo
 
 # Default
 playsound entity.puffer_fish.blow_out player @a ~ ~ ~ 1 1
+
+# Kill
+kill @s
