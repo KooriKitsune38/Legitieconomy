@@ -1,0 +1,26 @@
+{
+    "condition": "value_check",
+    "range": {
+        "min": {
+            "type":"score",
+            "score":"k.UUIDs",
+            "target": {
+                "type": "fixed",
+                "name": ".temp"
+            }
+        },
+        "max": {
+            "type":"score",
+            "score":"k.UUIDs",
+            "target": {
+                "type": "fixed",
+                "name": ".temp"
+            }
+        }
+    },
+    "value": {
+        "type": "score",
+        "score":"k.UUIDs",
+        "target": "this"
+    }
+}

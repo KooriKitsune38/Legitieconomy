@@ -8,7 +8,7 @@
                         "condition": "location_check",
                         "predicate": {
                             "block": {
-                                "blocks": "chest",
+                                "blocks": "#legitieconomy:chest",
                                 "nbt": {
                                     "lock": {
                                         "components": {

@@ -1,2 +1,0 @@
-# Legitieconomy
-Coins!

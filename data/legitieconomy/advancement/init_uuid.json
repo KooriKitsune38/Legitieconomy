@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "trigger":{
+            "trigger": "tick"
+        }
+    },
+    "rewards": {
+        "function": "legitieconomy:coins/pet/register_uuid"
+    }
+}

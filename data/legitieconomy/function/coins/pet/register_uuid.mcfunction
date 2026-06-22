@@ -1,0 +1,1 @@
+execute store result score @s k.UUIDs run data get entity @s UUID[0]

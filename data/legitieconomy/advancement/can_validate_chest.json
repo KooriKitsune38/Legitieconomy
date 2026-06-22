@@ -1,0 +1,55 @@
+{
+    "criteria": {
+        "trigger": {
+            "trigger": "item_used_on_block",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "mainhand": {
+                                            "predicates": {
+                                                "minecraft:custom_data": {
+                                                    "k.treasureChest": true
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "condition": "any_of",
+                                "terms": [
+                                    {
+                                        "condition": "entity_properties",
+                                        "entity": "this",
+                                        "predicate": {
+                                            "nbt": {
+                                                "Tags": [
+                                                    "hasExtraTools",
+                                                    "canUseTools"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "condition": "reference",
+                                        "name": "legitiguard:staff_member"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "legitieconomy:coins/legitichest/validate_nearest_chest"
+    }
+}
