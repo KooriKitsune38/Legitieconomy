@@ -1,4 +1,6 @@
-execute unless score @s le.leave matches 1.. if score @s le.petCode matches -2147483648..2147483647 run return fail
+scoreboard players operation .temp k.UUIDs = @s k.UUIDs
+kill @n[type=item_display,tag=le.Pet,predicate=legitieconomy:pet/match_uuid]
+
 tag @s add .temp
 scoreboard players operation .temp k.UUIDs = @s k.UUIDs
 $execute summon item_display run function legitieconomy:coins/pet/spawn/$(pet)
