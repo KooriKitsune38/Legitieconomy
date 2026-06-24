@@ -4,7 +4,7 @@
         "condition": "entity_scores",
         "entity": "this",
         "scores": {
-            "le.gadgetEntity": 1
+            "le.Entity": 1
         }
     }
 }

@@ -1,0 +1,48 @@
+{
+    "criteria": {
+        "trigger": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "all_of",
+                        "terms": [
+                            {
+                                "condition": "entity_scores",
+                                "entity": "this",
+                                "scores": {
+                                    "le.Entity": 1
+                                }
+                            },
+                            {
+                                "condition": "entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "nbt": {
+                                        "Tags": [
+                                            "le.Shop"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "player": [
+                    {
+                        "condition": "entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "Legiticoins": {
+                                "min": 1
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "legitieconomy:shop/clicked_shop"
+    }
+}

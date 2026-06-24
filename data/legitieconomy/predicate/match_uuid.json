@@ -3,7 +3,7 @@
     "range": {
         "min": {
             "type":"score",
-            "score":"le.beggarUUID",
+            "score":"k.UUIDs",
             "target": {
                 "type": "fixed",
                 "name": ".temp"
@@ -11,7 +11,7 @@
         },
         "max": {
             "type":"score",
-            "score":"le.beggarUUID",
+            "score":"k.UUIDs",
             "target": {
                 "type": "fixed",
                 "name": ".temp"
@@ -20,7 +20,7 @@
     },
     "value": {
         "type": "score",
-        "score":"le.beggarUUID",
+        "score":"k.UUIDs",
         "target": "this"
     }
 }

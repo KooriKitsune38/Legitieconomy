@@ -15,3 +15,8 @@ execute as @e[type=item,tag=le.reefDrop,predicate=legitieconomy:on_ground] at @s
 execute as @a[scores={le.petCode=-2147483648..2147483647}] at @s run function legitieconomy:coins/pet/has_pet
 
 execute at @e[type=item_display,tag=le.Pet,tag=le.petEvilReef,predicate=legitieconomy:half_second] run particle small_flame ~ ~ ~ .1 .1 .1 0.005 5 normal
+
+# Shops
+scoreboard players reset @a[scores={price=-2147483648..,le.leave=1..}] price
+scoreboard players reset @a[scores={stock=-2147483648..,le.leave=1..}] stock
+scoreboard players reset @a[scores={le.leave=1..}] le.leave

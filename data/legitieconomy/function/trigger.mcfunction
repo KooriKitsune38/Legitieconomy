@@ -1,5 +1,5 @@
 execute store result score @s le.beggarUUID store result score .temp le.beggarUUID run data get entity @s UUID[0]
-kill @n[type=interaction,tag=le.beggarInteraction,predicate=legitieconomy:match_uuid]
+kill @n[type=interaction,tag=le.beggarInteraction,predicate=legitieconomy:beg/match_uuid]
 execute if score @s beg matches -1 run return run function legitieconomy:cancel_beg
 
 #gamerule sendCommandFeedback false

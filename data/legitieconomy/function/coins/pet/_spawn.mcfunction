@@ -1,5 +1,5 @@
 scoreboard players operation .temp k.UUIDs = @s k.UUIDs
-kill @n[type=item_display,tag=le.Pet,predicate=legitieconomy:pet/match_uuid]
+kill @n[type=item_display,tag=le.Pet,predicate=legitieconomy:match_uuid]
 
 tag @s add .temp
 scoreboard players operation .temp k.UUIDs = @s k.UUIDs

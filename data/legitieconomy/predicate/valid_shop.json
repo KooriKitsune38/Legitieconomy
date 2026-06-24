@@ -1,0 +1,39 @@
+{
+    "condition": "all_of",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": {
+                    "Tags": [
+                        "le.Shop"
+                    ]
+                }
+            }
+        },
+        {
+            "condition": "any_of",
+            "terms": [
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "nbt": {
+                            "interaction": {}
+                        }
+                    }
+                },
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "nbt": {
+                            "attack": {}
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+$scoreboard players operation $(owner) Legiticoins += .temp Legiticoins

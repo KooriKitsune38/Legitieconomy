@@ -5,11 +5,14 @@ scoreboard objectives add le.beggingTimer dummy
 scoreboard objectives add le.beggarUUID dummy
 
 scoreboard objectives add le.gadgetValues dummy
-scoreboard objectives add le.gadgetEntity dummy
+scoreboard objectives add le.Entity dummy
 
 scoreboard objectives add k.UUIDs dummy
 scoreboard objectives add le.petCode dummy
 scoreboard objectives add le.leave custom:leave_game
+
+scoreboard objectives add price trigger
+scoreboard objectives add stock trigger
 
 scoreboard players set .2 Legiticoins 2
 scoreboard players set .beggingDuration le.beggingTimer 201

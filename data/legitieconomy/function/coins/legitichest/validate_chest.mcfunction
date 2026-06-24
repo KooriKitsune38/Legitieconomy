@@ -4,5 +4,5 @@ execute if block ~ ~ ~ #legitieconomy:chest[facing=west] run tp @s ~ ~ ~ 90 ~
 execute if block ~ ~ ~ #legitieconomy:chest[facing=east] run tp @s ~ ~ ~ -90 ~
 execute unless block ~ ~ ~ #legitieconomy:chest run kill @s
 
-execute unless entity @s[scores={le.gadgetEntity=1},tag=le.disabledChest] run function legitieconomy:coins/legitichest/lock_chest
-execute if entity @s[scores={le.gadgetEntity=1},tag=le.disabledChest] run function legitieconomy:coins/legitichest/unlock_chest
+execute unless entity @s[scores={le.Entity=1},tag=le.disabledChest] run function legitieconomy:coins/legitichest/lock_chest
+execute if entity @s[scores={le.Entity=1},tag=le.disabledChest] run function legitieconomy:coins/legitichest/unlock_chest

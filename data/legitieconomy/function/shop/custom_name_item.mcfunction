@@ -1,0 +1,1 @@
+$execute if data entity @s data.shopData.item.components."minecraft:custom_name" run return run tellraw @p[tag=.temp] [{text:"Item: ",color:"yellow"},[{text:"",hover_event:{action:"show_item",id:"$(id)",components:$(components),count:$(count)}},$(custom_name),{text:" (Hover for info)",color:"white"}],"\n"]

@@ -1,0 +1,18 @@
+execute store result score .temp Legiticoins run data get entity @s data.shopData.claimPrice
+
+execute on target if score @s Legiticoins <= .temp Legiticoins run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enough Legiticoins to claim this shop!",color:"red"}]
+
+execute on target run scoreboard players operation @s Legiticoins -= .temp Legiticoins
+
+scoreboard players operation @s k.UUIDs = @p[tag=.temp] k.UUIDs
+execute at @s run function legitieconomy:shop/register_name
+
+#data modify storage uuid:in UUID set from entity @p[tag=.temp] UUID
+#function uuid:convert
+#data modify entity @s data.shopData.ownerUUID set from storage uuid:out plain
+
+data modify entity @s CustomName.text set value "Price: "
+data modify entity @s CustomName.extra[0].text set value "Null"
+execute at @s run particle totem_of_undying ~ ~ ~ .2 .2 .2 0.2 20 normal
+playsound entity.player.levelup player @a ~ ~ ~ 1 1.4
+execute on target run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Shop Claimed!",color:"green"}]
