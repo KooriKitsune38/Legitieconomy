@@ -1,3 +1,9 @@
+# Check amount of shops
+scoreboard players operation .temp k.UUIDs = @p[tag=.temp] k.UUIDs
+execute store result score .temp Legiticoins if entity @e[type=interaction,tag=le.Shop,predicate=legitieconomy:match_uuid]
+execute if score .temp Legiticoins >= .maxShopOwnership Legiticoins on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You reached the max shop limit.",color:"red"}]
+
+# Claim
 execute store result score .temp Legiticoins run data get entity @s data.shopData.claimPrice
 
 execute on target if score @s Legiticoins <= .temp Legiticoins run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enough Legiticoins to claim this shop!",color:"red"}]
@@ -15,4 +21,4 @@ data modify entity @s CustomName.text set value "Price: "
 data modify entity @s CustomName.extra[0].text set value "Null"
 execute at @s run particle totem_of_undying ~ ~ ~ .2 .2 .2 0.2 20 normal
 playsound entity.player.levelup player @a ~ ~ ~ 1 1.4
-execute on target run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Shop Claimed!",color:"green"}]
+execute on target run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Shop Claimed! (Sneak and left click on the shop to unclaim it)",color:"green"}]

@@ -1,3 +1,5 @@
+execute if entity @p[tag=.temp,predicate=legitieconomy:match_uuid,predicate=legitieconomy:sneaking] run return run function legitieconomy:shop/unclaim
+
 tellraw @p[tag=.temp] [{text:"__/--",color:"dark_gray"},{text:"LegitiShop",color:"gold"},{text:"--\\__",color:"dark_gray"}]
 
 data modify entity @s data.shopData.item.custom_name set from entity @s data.shopData.item.components."minecraft:custom_name"
