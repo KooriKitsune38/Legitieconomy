@@ -1,0 +1,30 @@
+{
+    "criteria": {
+        "trigger":{
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "nbt":{
+                        "Tags":[
+                            "le.petToggle"
+                        ]
+                    }
+                },
+                "player": [
+                    {
+                        "condition": "entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "le.petCode": {
+                                "min": -2147483648
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "legitieconomy:coins/pet/toggle_pet"
+    }
+}

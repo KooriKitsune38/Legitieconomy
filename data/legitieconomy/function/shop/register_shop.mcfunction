@@ -1,7 +1,7 @@
 # Check amount of shops
 scoreboard players operation .temp k.UUIDs = @p[tag=.temp] k.UUIDs
 execute store result score .temp Legiticoins if entity @e[type=interaction,tag=le.Shop,predicate=legitieconomy:match_uuid]
-execute if score .temp Legiticoins >= .maxShopOwnership Legiticoins on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You reached the max shop limit.",color:"red"}]
+execute if score .temp Legiticoins >= .maxShopOwnership Legiticoins on target unless predicate legitiguard:staff_member run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You reached the max shop limit.",color:"red"}]
 
 # Claim
 execute store result score .temp Legiticoins run data get entity @s data.shopData.claimPrice

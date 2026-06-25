@@ -1,4 +1,4 @@
-$execute align xyz run summon interaction ~.5 ~-0.025 ~.5 {width:1.05f,height:-1f,Tags:["le.Shop"],data:{shopData:{claimPrice:$(price)}},response:true,CustomNameVisible:true,CustomName:[{text:"Claim: ",color:"light_purple"},{text:"$(price)",color:"aqua"},{text:"$",color:"aqua"}]}
+$execute align xyz run summon interaction ~.5 ~-0.025 ~.5 {width:1.05f,height:-1f,Tags:["le.Shop"],data:{shopData:{claimPrice:$(price)}},response:true,CustomNameVisible:false,CustomName:[{text:"Claim: ",color:"light_purple"},{text:"$(price)",color:"aqua"},{text:"$",color:"aqua"}]}
 execute align xyz run tp ~.5 ~-0.025 ~.5
 execute at @s run data modify entity @n[type=interaction,tag=le.Shop,distance=..0.1] height set value 1.075f
 execute at @s run scoreboard players set @n[type=interaction,tag=le.Shop,distance=..0.1] le.Entity 1
