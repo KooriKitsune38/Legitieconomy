@@ -1,6 +1,6 @@
 execute store result score .temp Legiticoins run data get entity @s data.shopData.claimPrice
 
-execute on target if score @s Legiticoins <= .temp Legiticoins run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enough Legiticoins to claim this shop!",color:"red"}]
+execute on target if score @s Legiticoins < .temp Legiticoins run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enough Legiticoins to claim this shop!",color:"red"}]
 
 execute on target run scoreboard players operation @s Legiticoins -= .temp Legiticoins
 

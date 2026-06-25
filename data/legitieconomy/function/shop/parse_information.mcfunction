@@ -18,7 +18,7 @@ execute if data entity @s data.shopData.command run return run function legitiec
 execute unless data entity @s data.shopData.item on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"There's no item breh",color:"red"}]
 
 execute store result score .temp Legiticoins run data get entity @s data.shopData.price
-execute on target if score @s Legiticoins <= .temp Legiticoins run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enought coinz",color:"red"}]
+execute on target if score @s Legiticoins < .temp Legiticoins run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enought coinz",color:"red"}]
 
 execute on target run scoreboard players operation @s Legiticoins -= .temp Legiticoins
 function legitieconomy:shop/pay_owner with entity @s data.shopData
