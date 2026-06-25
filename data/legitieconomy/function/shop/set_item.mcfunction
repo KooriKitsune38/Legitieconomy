@@ -1,26 +1,42 @@
-execute if data entity @s data.shopData.item.id at @s run return run function legitieconomy:shop/remove_item
+tag @s add .temp
+scoreboard players operation .temp k.UUIDs = @s k.UUIDs
 
-execute on target run scoreboard players enable @s[gamemode=creative] amount
-execute on target unless score @s amount matches 1.. run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"amount\" to set how many items are sold at once.",color:"green"}]
-execute on target run scoreboard players enable @s[gamemode=creative] stock
-execute on target if score @s stock matches ..0 unless score @s stock matches -1 run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"stock\" to set the stored amount for the item (-1 for infinite).",color:"green"}]
-execute on target run scoreboard players enable @s price
-execute on target unless score @s price matches 1.. run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"price\" to set the price for the item, then click again.",color:"green"}]
-execute on target unless score @s price matches 1.. run return fail
+# Attack
+execute if data entity @s attack run return run function legitieconomy:shop/show_info
 
-execute on target unless data entity @s SelectedItem run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Hold an item to place it",color:"red"}]
+# Interaction
+execute store result score .temp Legiticoins if entity @e[type=item,predicate=legitieconomy:no_tags]
+execute if score .temp Legiticoins matches 100.. on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"There are too many items in the world! Retry Later.",color:"red"}]
 
-data modify storage k.temp:temp item set from entity @p[tag=.temp] SelectedItem
-data modify entity @s data.shopData.item set from storage k.temp:temp item
-execute if score @p[tag=.temp] stock matches -1.. store result entity @s data.shopData.item.count int 1 run scoreboard players get @p[tag=.temp] stock
-data modify entity @s data.shopData.sellAmount set value 1
-execute if score @p[tag=.temp] amount matches 1.. store result entity @s data.shopData.sellAmount int 1 on target run scoreboard players get @s amount
-execute on passengers run data modify entity @s item set from storage k.temp:temp item
+scoreboard players reset .temp Legiticoins
+execute if score @s k.UUIDs matches 0 run return run function legitieconomy:shop/register_shop
 
-execute store result entity @s data.shopData.price int 1 store result storage k.temp:temp string int 1 run scoreboard players get @p[tag=.temp] price
-data modify entity @s CustomName.extra[0].text set string storage k.temp:temp string
+execute if entity @p[tag=.temp,predicate=legitieconomy:match_uuid] run return run function legitieconomy:shop/set_item
 
-execute on target run scoreboard players reset @s price
-execute on target run scoreboard players reset @s amount
-execute on target run scoreboard players reset @s stock
-execute on target run item replace entity @s weapon.mainhand with air
+execute unless data entity @s data.shopData.item on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"There's no item breh",color:"red"}]
+
+execute store result score .temp Legiticoins run data get entity @s data.shopData.price
+execute on target if score @s Legiticoins < .temp Legiticoins run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enought coinz",color:"red"}]
+
+execute on target run scoreboard players operation @s Legiticoins -= .temp Legiticoins
+function legitieconomy:shop/pay_owner with entity @s data.shopData
+
+#> Command
+execute if data entity @s data.shopData.command run return run function legitieconomy:shop/run_command with entity @s data.shopData
+
+#> Item
+execute store result score .temp Legiticoins run data get entity @s data.shopData.item.count
+execute store result score .temp2 Legiticoins run data get entity @s data.shopData.sellAmount
+execute unless score .temp Legiticoins matches -1 if score .temp2 Legiticoins > .temp Legiticoins on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Out of stock.",color:"red"}]
+
+execute on target anchored eyes rotated ~ 0 run particle minecraft:item{item:{id:"sunflower"}} ^ ^-.5 ^ .2 .3 .2 0.2 10 normal
+playsound minecraft:block.note_block.flute player @s ~ ~ ~ 1 2
+
+summon item ~ ~ ~ {PickupDelay:0,Motion:[0d,0.3d,0d],Tags:[".temp"],Item:{id:"oak_button",count:1}}
+data modify entity @n[type=item,distance=..0.1,tag=.temp,nbt={Age:0s}] Item set from entity @s data.shopData.item
+data modify entity @n[type=item,distance=..0.1,tag=.temp,nbt={Age:0s}] Owner set from entity @p[tag=.temp] UUID
+
+data modify entity @n[type=item,distance=..0.1,tag=.temp,nbt={Age:0s}] Item.count set from entity @s data.shopData.sellAmount
+
+execute unless score .temp Legiticoins matches -1 store result entity @s data.shopData.item.count int 1 run scoreboard players operation .temp Legiticoins -= .temp2 Legiticoins
+execute unless score .temp Legiticoins matches -1 if score .temp Legiticoins matches ..0 run function legitieconomy:shop/remove_item

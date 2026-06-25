@@ -5,7 +5,7 @@ scoreboard players operation .temp k.UUIDs = @s k.UUIDs
 execute if data entity @s attack run return run function legitieconomy:shop/show_info
 
 # Interaction
-execute store result score .temp Legiticoins if entity @e[type=item]
+execute store result score .temp Legiticoins if entity @e[type=item,predicate=legitieconomy:no_tags]
 execute if score .temp Legiticoins matches 100.. on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"There are too many items in the world! Retry Later.",color:"red"}]
 
 scoreboard players reset .temp Legiticoins
