@@ -1,5 +1,5 @@
 # aug 4th 2025, begging turned off by legitimoose, because i didn't like seeing the command spam in chat lol
-# I added a cooldown
+# Disabled Begging again - Koori
 scoreboard players enable @a beg
 execute as @a[scores={beg=-1..}] unless score @s beg matches 0 at @s run function legitieconomy:trigger
 execute as @a[scores={le.beggingTimer=0..}] at @s run function legitieconomy:begging

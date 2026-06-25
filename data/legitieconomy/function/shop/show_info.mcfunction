@@ -5,8 +5,9 @@ tellraw @p[tag=.temp] [{text:"__/--",color:"dark_gray"},{text:"LegitiShop",color
 data modify entity @s data.shopData.item.custom_name set from entity @s data.shopData.item.components."minecraft:custom_name"
 function legitieconomy:shop/show_item with entity @s data.shopData.item
 
-tellraw @p[tag=.temp] [{text:"Amount Stored: ",color:"yellow"},{nbt:"data.shopData.item.count",entity:"@s",color:"aqua"},"\n"]
-tellraw @p[tag=.temp] [{text:"Price: ",color:"yellow"},{nbt:"data.shopData.price",entity:"@s",color:"aqua"},{text:"$",color:"aqua"},"\n"]
+function legitieconomy:shop/show_stock
+
+tellraw @p[tag=.temp] [{text:"Price: ",color:"yellow"},{nbt:"data.shopData.price",entity:"@s",color:"aqua"},{text:"$",color:"aqua"}," ",{text:"[x",color:"gray"},{nbt:"data.shopData.sellAmount",entity:"@s",color:"gray"},{text:"]",color:"gray"},"\n"]
 tellraw @p[tag=.temp] [{text:"Owner: ",color:"yellow"},{nbt:"data.shopData.owner",entity:"@s",color:"aqua"}]
 
 tellraw @p[tag=.temp] {text:"-------------------",color:"dark_gray"}

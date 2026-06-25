@@ -1,0 +1,2 @@
+execute if data entity @s data.shopData.item{count:-1} run return run tellraw @p[tag=.temp] [{text:"Stock: ",color:"yellow"},{text:"Infinite",color:"aqua"},"\n"]
+tellraw @p[tag=.temp] [{text:"Stock: ",color:"yellow"},{nbt:"data.shopData.item.count",entity:"@s",color:"aqua"},"\n"]

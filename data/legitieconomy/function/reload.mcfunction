@@ -14,6 +14,7 @@ scoreboard objectives add le.leave custom:leave_game
 scoreboard objectives add price trigger
 scoreboard objectives add stock trigger
 scoreboard objectives add confirm trigger
+scoreboard objectives add amount trigger
 
 scoreboard players set .2 Legiticoins 2
 scoreboard players set .beggingDuration le.beggingTimer 201
