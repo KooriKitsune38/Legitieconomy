@@ -5,7 +5,7 @@ scoreboard players operation .temp beg = @s beg
 
 execute if score @p[predicate=legitieconomy:beg/match_uuid] le.beggingTimer > .beggingInteractionThreshold le.beggingTimer run return fail
 
-execute on target unless score @s confirm matches -2147483648..2147483647 run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"confirm\" if you're sure, then click again.",color:"aqua"}]
+execute on target unless score @s confirm matches -2147483648..2147483647 run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"confirm\" if you're sure, then click again.",color:"aqua"}]
 execute on target run scoreboard players enable @s confirm
 execute on target unless score @s confirm matches 1.. run return fail
 
