@@ -5,7 +5,7 @@ function legitieconomy:shop/remove_item
 scoreboard players reset @s k.UUIDs
 data remove entity @s data.shopData.owner
 data remove entity @s data.shopData.command
-data modify entity @s CustomName set value [{text:"Claim: ",color:"light_purple"},{text:"1",color:"aqua"},{text:"$",color:"aqua"}]
+data modify entity @s CustomName set value [{text:"Claim: ",color:"green"},{text:"1",color:"aqua"},{text:"$",color:"aqua"}]
 data modify entity @s CustomName.extra[0].text set string entity @s data.shopData.claimPrice
 
 playsound entity.player.levelup player @a ~ ~ ~ 1 1.8

@@ -6,5 +6,6 @@ execute unless score .temp Legiticoins matches ..0 unless score .temp Legiticoin
 data remove entity @s data.shopData.item
 data remove entity @s data.shopData.command
 data modify entity @s CustomName.extra[0].text set value "Null"
+data modify entity @s CustomName.extra[1].text set value "$"
 data modify entity @s data.shopData.price set value 0
 execute on passengers run data modify entity @s item.id set value "air"
