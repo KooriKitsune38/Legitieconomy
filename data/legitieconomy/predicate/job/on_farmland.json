@@ -1,0 +1,9 @@
+{
+    "condition": "location_check",
+    "predicate": {
+        "block":{
+            "blocks": "farmland"
+        }
+    },
+    "offsetY": -1
+}

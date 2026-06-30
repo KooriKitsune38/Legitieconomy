@@ -16,6 +16,8 @@ scoreboard objectives add stock trigger
 scoreboard objectives add confirm trigger
 scoreboard objectives add amount trigger
 
+scoreboard objectives add le.farmingJob dummy
+
 scoreboard players set .2 Legiticoins 2
 scoreboard players set .beggingDuration le.beggingTimer 201
 scoreboard players add .maxShopOwnership Legiticoins 0
@@ -31,3 +33,5 @@ schedule function legitieconomy:coins/legitichest/count_chests 5s replace
 schedule function legitieconomy:coins/legitichest/rotation_schedule 5s replace
 
 schedule function legitieconomy:coins/pet/validate_schedule 30s replace
+
+schedule function legitieconomy:job/farming/crop_schedule 60s replace

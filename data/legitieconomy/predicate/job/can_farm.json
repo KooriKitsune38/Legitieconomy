@@ -1,0 +1,27 @@
+{
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "#legitieconomy:crops",
+                    "state": {
+                        "age": "7"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "beetroots",
+                    "state": {
+                        "age": "3"
+                    }
+                }
+            }
+        }
+    ]
+}

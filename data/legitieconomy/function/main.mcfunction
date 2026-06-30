@@ -22,3 +22,7 @@ scoreboard players reset @a[scores={stock=-2147483648..,le.leave=1..}] stock
 scoreboard players reset @a[scores={confirm=-2147483648..},predicate=legitieconomy:10_seconds] confirm
 scoreboard players reset @a[scores={le.leave=1..}] le.leave
 tag @a[predicate=legitieconomy:half_second,tag=le.cantShop] remove le.cantShop
+
+# Jobs
+execute as @a at @s positioned ~ ~0.0625 ~ if predicate legitieconomy:job/can_farm run function legitieconomy:job/farming/collect_crop
+effect give @a[predicate=legitieconomy:job/on_farmland] slow_falling 1 0 true
