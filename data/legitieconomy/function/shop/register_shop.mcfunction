@@ -17,8 +17,7 @@ execute at @s run function legitieconomy:shop/register_name
 #function uuid:convert
 #data modify entity @s data.shopData.ownerUUID set from storage uuid:out plain
 
-data modify entity @s CustomName.text set value "Price: "
-data modify entity @s CustomName.extra[0].text set value "Null"
+data modify entity @s CustomName set value {color: "light_purple", extra: [{color: "aqua", text: "Null"}, {color: "aqua", text: "$"}], text: "Price: "}
 execute at @s run particle totem_of_undying ~ ~ ~ .2 .2 .2 0.2 20 normal
 playsound entity.player.levelup player @a ~ ~ ~ 1 1.4
 execute on target run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Shop Claimed! (Sneak and left click on the shop to unclaim it)",color:"green"}]

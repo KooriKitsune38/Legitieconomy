@@ -1,3 +1,4 @@
+execute if score .temp Legiticoins matches 0 run return fail
 $scoreboard players operation $(owner) Legiticoins += .temp Legiticoins
 
 $title @p[name=$(owner)] actionbar [{text:"",color:"dark_gray"},{score:{name:".temp",objective:"Legiticoins"},color:"gray"}," ",{text:"LegitiCoin",color:"gold",hover_event:{action:"show_item",id:"sunflower",components:{"minecraft:custom_data":{legitiCoin:1b},"minecraft:custom_name":{color:"gold",italic:false,text:"LegitiCoin"},"minecraft:lore":[{color:"gray",italic:false,text:"Collect Me!"}]}}},{text:" collected!",color:"gray"}]
