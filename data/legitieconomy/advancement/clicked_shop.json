@@ -34,7 +34,7 @@
                         "entity": "this",
                         "scores": {
                             "Legiticoins": {
-                                "min": 1
+                                "min": 0
                             }
                         }
                     }
