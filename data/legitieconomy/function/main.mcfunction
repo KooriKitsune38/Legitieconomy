@@ -17,12 +17,18 @@ execute as @a[scores={le.petCode=-2147483648..2147483647}] at @s run function le
 execute at @e[type=item_display,tag=le.Pet,tag=le.petEvilReef,predicate=legitieconomy:half_second] run particle small_flame ~ ~ ~ .1 .1 .1 0.005 5 normal
 
 # Shops
-scoreboard players reset @a[scores={price=-2147483648..,le.leave=1..}] price
-scoreboard players reset @a[scores={stock=-2147483648..,le.leave=1..}] stock
-scoreboard players reset @a[scores={confirm=-2147483648..},predicate=legitieconomy:10_seconds] confirm
-scoreboard players reset @a[scores={le.leave=1..}] le.leave
+scoreboard players reset @s[scores={confirm=-2147483648..},predicate=legitieconomy:10_seconds] confirm
 tag @a[predicate=legitieconomy:half_second,tag=le.cantShop] remove le.cantShop
 
 # Jobs
 execute as @a at @s positioned ~ ~0.0625 ~ if predicate legitieconomy:job/can_farm run function legitieconomy:job/farming/collect_crop
 effect give @a[predicate=legitieconomy:job/on_farmland] slow_falling 1 0 true
+
+execute as @a[scores={le.deliveryUUIDs=-2147483648..},predicate=legitieconomy:half_second] run function legitieconomy:job/delivery/deliverying
+
+
+# Leave
+execute as @a[scores={le.leave=1..}] run function legitieconomy:left
+
+# Death
+execute as @a[scores={le.death=1..}] run function legitieconomy:death

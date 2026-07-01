@@ -1,0 +1,4 @@
+summon minecraft:item_display ~ ~ ~ {Tags:["le.deliveryBox"],item: {components: {"minecraft:profile": {properties: [{name: "textures", value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2ZhM2Y2ZjlmNTBhYzY3ZGI5OGI2OGExNWZkMDU5MDE1Mjg4MzZhMThjNzBmYjM5MmFhODlmNGI2MDgzNzY2YiJ9fX0="}]}}, count: 1, id: "minecraft:player_head"}, item_display: "fixed", transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.5000001f, 1.5000001f, 1.5000001f], translation: [0.0f, 0.37500003f, 0.0f]}}
+
+execute as @n[type=item_display,tag=le.deliveryBox,distance=..0.1] store result score @s le.deliveryUUIDs run data get entity @s UUID[0]
+scoreboard players add @n[type=item_display,tag=le.deliveryBox,distance=..0.1] le.Entity 1

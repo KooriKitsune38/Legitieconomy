@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "trigger":{
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity":{
+                    "nbt":{
+                        "Tags":[
+                            "le.deliveryStarter"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "legitieconomy:job/delivery/start_delivery"
+    }
+}

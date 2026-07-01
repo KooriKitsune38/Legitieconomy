@@ -17,6 +17,8 @@ scoreboard objectives add confirm trigger
 scoreboard objectives add amount trigger
 
 scoreboard objectives add le.farmingJob dummy
+scoreboard objectives add le.deliveryUUIDs dummy
+scoreboard objectives add le.death custom:deaths
 
 scoreboard players set .2 Legiticoins 2
 scoreboard players set .beggingDuration le.beggingTimer 201
