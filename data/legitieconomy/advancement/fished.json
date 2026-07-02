@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "trigger":{
+            "trigger": "fishing_rod_hooked",
+            "conditions": {
+                "rod": {
+                    "components": {
+                        "enchantments": {}
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "legitieconomy:job/fishing/fished"
+    }
+}

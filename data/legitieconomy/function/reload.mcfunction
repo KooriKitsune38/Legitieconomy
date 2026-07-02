@@ -1,3 +1,4 @@
+scoreboard objectives add k.Values dummy
 scoreboard objectives add Legiticoins dummy
 
 scoreboard objectives add beg trigger

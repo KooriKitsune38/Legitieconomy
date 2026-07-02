@@ -4,4 +4,4 @@ scoreboard players reset @s stock
 scoreboard players reset @s amount
 tag @s remove can_take_damage
 
-function legitieconomy:job/delivery/end_delivery
+execute if score @s le.deliveryUUIDs matches -2147483648..2147483647 run function legitieconomy:job/delivery/end_delivery
