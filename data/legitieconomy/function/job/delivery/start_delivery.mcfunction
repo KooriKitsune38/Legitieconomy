@@ -7,7 +7,7 @@ clear @s *[!custom_model_data={strings:["legitimoose:navigator"]}]
 
 tellraw @s " "
 tellraw @s [{text:"| ",color:"dark_gray"},{"text":"Read the item's lore for the delivery info.","color":"blue"}]
-tellraw @s [{text:"| ",color:"dark_gray"},{"text":"If you drop the item or you fly you'll fail.","color":"blue"}]
+tellraw @s [{text:"| ",color:"dark_gray"},{"text":"If you drop the item or get wet and you'll fail.","color":"blue"}]
 playsound block.note_block.pling player @s ~ ~ ~ 1 2
 
 tag @s add .temp
