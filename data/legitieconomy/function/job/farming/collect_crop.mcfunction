@@ -2,6 +2,8 @@ function legitieconomy:job/farming/replant_crop
 particle block{block_state:{Name:"wheat",Properties:{age:"7"}}} ~ ~ ~ .25 .25 .25 1 10 normal
 playsound block.crop.break block @a ~ ~ ~ 1 1
 
+clear @s #villager_plantable_seeds[block_state]
+
 scoreboard players add @s le.farmingJob 1
 
 title @s actionbar [{"text":"Crops Harvested: ","color":"green"},{"score":{"objective":"le.farmingJob","name":"@s"},"color":"light_purple"},"/",{"score":{"name":".requiredAmount","objective":"le.farmingJob"},"color":"green"}]
