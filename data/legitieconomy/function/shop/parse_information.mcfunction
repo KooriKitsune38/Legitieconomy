@@ -16,19 +16,19 @@ execute if entity @p[tag=.temp,predicate=legitieconomy:match_uuid] run return ru
 execute unless data entity @s data.shopData.item on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"There's no item breh",color:"red"}]
 
 #execute on target if score @s Legiticoins matches ..0 run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enought coinz",color:"red"}]
-execute store result score .temp Legiticoins run data get entity @s data.shopData.price
-execute on target if score @s Legiticoins < .temp Legiticoins run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enought coinz",color:"red"}]
+execute store result score .price Legiticoins run data get entity @s data.shopData.price
+execute on target if score @s Legiticoins < .price Legiticoins run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enought coinz",color:"red"}]
 
-execute on target run scoreboard players operation @s Legiticoins -= .temp Legiticoins
+execute on target run scoreboard players operation @s Legiticoins -= .price Legiticoins
 function legitieconomy:shop/pay_owner with entity @s data.shopData
 
 #> Command
+execute store result score .count Legiticoins run data get entity @s data.shopData.item.count
+execute store result score .amount Legiticoins run data get entity @s data.shopData.sellAmount
 execute if data entity @s data.shopData.command run return run function legitieconomy:shop/run_command with entity @s data.shopData
 
 #> Item
-execute store result score .temp Legiticoins run data get entity @s data.shopData.item.count
-execute store result score .temp2 Legiticoins run data get entity @s data.shopData.sellAmount
-execute unless score .temp Legiticoins matches -1 if score .temp2 Legiticoins > .temp Legiticoins on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Out of stock.",color:"red"}]
+execute unless score .count Legiticoins matches -1 if score .amount Legiticoins > .count Legiticoins on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Out of stock.",color:"red"}]
 
 execute on target anchored eyes rotated ~ 0 run particle minecraft:item{item:{id:"sunflower"}} ^ ^-.5 ^ .2 .3 .2 0.2 10 normal
 playsound minecraft:block.note_block.flute player @s ~ ~ ~ 1 2
@@ -39,5 +39,5 @@ data modify entity @n[type=item,distance=..0.1,tag=.temp,nbt={Age:0s}] Owner set
 
 data modify entity @n[type=item,distance=..0.1,tag=.temp,nbt={Age:0s}] Item.count set from entity @s data.shopData.sellAmount
 
-execute unless score .temp Legiticoins matches -1 store result entity @s data.shopData.item.count int 1 run scoreboard players operation .temp Legiticoins -= .temp2 Legiticoins
-execute unless score .temp Legiticoins matches -1 if score .temp Legiticoins matches ..0 run function legitieconomy:shop/remove_item
+execute unless score .count Legiticoins matches -1 store result entity @s data.shopData.item.count int 1 run scoreboard players operation .count Legiticoins -= .amount Legiticoins
+execute unless score .count Legiticoins matches -1 if score .count Legiticoins matches ..0 run function legitieconomy:shop/remove_item
