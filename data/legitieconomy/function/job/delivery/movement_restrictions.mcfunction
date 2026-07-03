@@ -12,6 +12,7 @@ scoreboard players reset @s warp
 execute if entity @s[gamemode=!adventure] run return run function legitieconomy:job/delivery/end_delivery
 execute unless entity @s[tag=.deliveryTemp] unless items entity @s player.cursor *[custom_data~{le.deliveryItem:true}] unless items entity @s container.* *[custom_data~{le.deliveryItem:true}] unless items entity @s weapon.offhand *[custom_data~{le.deliveryItem:true}] run return run function legitieconomy:job/delivery/end_delivery
 
+execute if predicate legitieconomy:5_seconds if data entity @s abilities{mayfly:1b} run return run function legitieconomy:job/delivery/end_delivery
 execute if predicate legitieconomy:job/has_modifiers run return run function legitieconomy:job/delivery/end_delivery
 execute if predicate legitieconomy:job/has_enchantments run return run function legitieconomy:job/delivery/end_delivery
 execute if predicate legitieconomy:is_flying run return run function legitieconomy:job/delivery/end_delivery
