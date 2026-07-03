@@ -1,0 +1,320 @@
+{
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "container.*": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "movement_speed"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "armor.*": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "movement_speed"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "weapon.offhand": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "movement_speed"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "container.*": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "jump_strength"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "armor.*": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "jump_strength"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "weapon.offhand": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "jump_strength"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "container.*": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "gravity"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "armor.*": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "gravity"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "weapon.offhand": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "gravity"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "container.*": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "scale"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "armor.*": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "scale"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "weapon.offhand": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "scale"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "container.*": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "step_height"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "armor.*": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "step_height"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "weapon.offhand": {
+                        "predicates": {
+                            "attribute_modifiers": {
+                                "modifiers": {
+                                    "contains": [
+                                        {
+                                            "attribute": "step_height"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

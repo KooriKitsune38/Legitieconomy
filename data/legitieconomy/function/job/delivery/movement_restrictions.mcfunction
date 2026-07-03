@@ -2,6 +2,7 @@ clear @s wind_charge
 clear @s ender_pearl
 clear @s totem_of_undying
 clear @s *[death_protection]
+clear @s *[entity_data]
 
 effect clear @s speed
 effect clear @s jump_boost
@@ -11,6 +12,7 @@ scoreboard players reset @s warp
 execute if entity @s[gamemode=!adventure] run return run function legitieconomy:job/delivery/end_delivery
 execute unless entity @s[tag=.deliveryTemp] unless items entity @s player.cursor *[custom_data~{le.deliveryItem:true}] unless items entity @s container.* *[custom_data~{le.deliveryItem:true}] unless items entity @s weapon.offhand *[custom_data~{le.deliveryItem:true}] run return run function legitieconomy:job/delivery/end_delivery
 
+execute if predicate legitieconomy:job/has_modifiers run return run function legitieconomy:job/delivery/end_delivery
 execute if predicate legitieconomy:job/has_enchantments run return run function legitieconomy:job/delivery/end_delivery
 execute if predicate legitieconomy:is_flying run return run function legitieconomy:job/delivery/end_delivery
 execute if predicate legitieconomy:is_riding run return run function legitieconomy:job/delivery/end_delivery
