@@ -1,6 +1,7 @@
 clear @s wind_charge
 clear @s ender_pearl
 clear @s totem_of_undying
+clear @s *[death_protection]
 
 effect clear @s speed
 effect clear @s jump_boost
