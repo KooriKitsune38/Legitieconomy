@@ -2,9 +2,6 @@ advancement revoke @s only legitieconomy:delivery_interaction
 
 execute if score @s le.deliveryUUIDs matches -2147483648..2147483647 run return run tellraw @s [{text:"| ",color:"dark_gray"},{"text":"You already have a delivery pending!","color":"red"}]
 
-tag @s remove legitivancements.can_parkour
-tag @s remove legitivancements.can_parkour_real
-tag @s remove legitivancements.can_parkour_real_fr
 gamemode adventure @s
 clear @s *[!custom_model_data={strings:["legitimoose:navigator"]}]
 

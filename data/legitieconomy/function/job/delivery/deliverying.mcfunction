@@ -2,6 +2,10 @@ tag @s add can_take_damage
 effect give @s glowing 1 0 true
 execute at @s run effect give @a[distance=..8] weakness 1 255 true
 
+tag @s remove legitivancements.can_parkour
+tag @s remove legitivancements.can_parkour_real
+tag @s remove legitivancements.can_parkour_real_fr
+
 execute at @s run function legitieconomy:job/delivery/movement_restrictions
 execute unless score @s le.deliveryUUIDs matches -2147483648..2147483647 run return fail
 
