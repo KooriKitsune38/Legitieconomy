@@ -1,6 +1,8 @@
 scoreboard objectives add k.Values dummy
 scoreboard objectives add Legiticoins dummy
 
+scoreboard objectives add le.afk dummy
+
 scoreboard objectives add beg trigger
 scoreboard objectives add le.beggingTimer dummy
 scoreboard objectives add le.beggarUUID dummy
@@ -27,6 +29,8 @@ scoreboard players add .maxShopOwnership Legiticoins 0
 
 scoreboard players operation .beggingInteractionThreshold le.beggingTimer = .beggingDuration le.beggingTimer
 scoreboard players remove .beggingInteractionThreshold le.beggingTimer 60
+
+schedule function legitieconomy:afk_schedule 60s replace
 
 schedule function legitieconomy:coins/gadget/reef_rain/_schedule 300s replace 
 schedule function legitieconomy:check_interaction 1s replace

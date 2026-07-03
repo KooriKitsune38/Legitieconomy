@@ -11,6 +11,7 @@ execute if score .temp Legiticoins matches 100.. on target run return run tellra
 scoreboard players reset .temp Legiticoins
 execute if score @s k.UUIDs matches 0 run return run function legitieconomy:shop/register_shop
 
+scoreboard players reset .count Legiticoins
 execute if entity @p[tag=.temp,predicate=legitieconomy:match_uuid] run return run function legitieconomy:shop/set_item
 
 execute unless data entity @s data.shopData.item on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"There's no item breh",color:"red"}]

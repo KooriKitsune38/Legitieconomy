@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "trigger":{
+        "trigger": {
             "trigger": "fishing_rod_hooked",
             "conditions": {
                 "rod": {
@@ -8,9 +8,17 @@
                         "enchantments": {}
                     }
                 },
-                "item": {
-                    
-                }
+                "player": [
+                    {
+                        "condition": "entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "le.afk": {
+                                "max": 10
+                            }
+                        }
+                    }
+                ]
             }
         }
     },
