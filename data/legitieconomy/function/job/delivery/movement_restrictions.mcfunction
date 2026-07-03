@@ -30,7 +30,7 @@ execute if block ~-.3 ~ ~.3 #legitieconomy:water run return run function legitie
 execute if block ~.3 ~ ~-.3 #legitieconomy:water run return run function legitieconomy:job/delivery/end_delivery
 execute if block ~-.3 ~ ~-.3 #legitieconomy:water run return run function legitieconomy:job/delivery/end_delivery
 
-execute anchored eyes if entity @n[type=fishing_bobber,distance=..0.1] run return run function legitieconomy:job/delivery/end_delivery
+execute anchored eyes if entity @n[type=fishing_bobber,distance=..0.5] run return run kill @n[type=fishing_bobber,distance=..0.5]
 execute if entity @n[type=shulker,distance=..1.2] run return run function legitieconomy:job/delivery/end_delivery
 execute if entity @n[type=happy_ghast,distance=..6] run return run function legitieconomy:job/delivery/end_delivery
 execute if entity @n[type=wind_charge,distance=..1.5] run return run function legitieconomy:job/delivery/end_delivery
