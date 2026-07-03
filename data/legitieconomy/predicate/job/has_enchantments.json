@@ -1,0 +1,57 @@
+{
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "equipment": {
+                    "legs": {
+                        "predicates": {
+                            "enchantments": []
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "equipment": {
+                    "feet": {
+                        "predicates": {
+                            "enchantments": []
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "equipment": {
+                    "chest": {
+                        "predicates": {
+                            "enchantments": []
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "equipment": {
+                    "head": {
+                        "predicates": {
+                            "enchantments": []
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
