@@ -21,7 +21,7 @@ scoreboard players reset @s[scores={confirm=-2147483648..},predicate=legitiecono
 tag @a[predicate=legitieconomy:half_second,tag=le.cantShop] remove le.cantShop
 
 # Jobs
-execute as @a at @s positioned ~ ~0.0625 ~ if predicate legitieconomy:job/can_farm run function legitieconomy:job/farming/collect_crop
+execute as @a[gamemode=!spectator] at @s positioned ~ ~0.0625 ~ if predicate legitieconomy:job/can_farm run function legitieconomy:job/farming/collect_crop
 effect give @a[predicate=legitieconomy:job/on_farmland] slow_falling 1 0 true
 
 execute as @a[scores={le.deliveryUUIDs=-2147483648..},predicate=legitieconomy:half_second] run function legitieconomy:job/delivery/deliverying
