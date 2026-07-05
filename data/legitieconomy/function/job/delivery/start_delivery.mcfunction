@@ -5,6 +5,7 @@ execute if score @s le.deliveryUUIDs matches -2147483648..2147483647 run return 
 gamemode adventure @s
 clear @s
 tag @s add le.deliveryDelay
+tag @s add .deliveryTemp
 
 tellraw @s " "
 tellraw @s [{text:"| ",color:"dark_gray"},{"text":"Read the item's lore for the delivery info.","color":"blue"}]
@@ -12,7 +13,7 @@ tellraw @s [{text:"| ",color:"dark_gray"},{"text":"If you drop the item or get w
 playsound block.note_block.pling player @s ~ ~ ~ 1 2
 
 tag @s add .temp
-execute as @e[type=item_display,tag=le.deliveryBox,scores={le.Entity=1},limit=1,sort=random] run function legitieconomy:job/delivery/get_box
-tag @s remove .temp
+execute as @n[type=interaction,predicate=legitieconomy:job/selective_delivery] run return run function legitieconomy:job/delivery/select_delivery with entity @s data."le.selectiveDelivery"
 
-tag @s add .deliveryTemp
+execute as @e[type=item_display,tag=le.deliveryBox,scores={le.Entity=1},limit=1,sort=random,tag=!le.noTarget] run function legitieconomy:job/delivery/get_box
+tag @s remove .temp

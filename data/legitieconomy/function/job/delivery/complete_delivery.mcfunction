@@ -1,3 +1,7 @@
+tag @s add .temp
+execute as @n[type=item_display,tag=le.deliveryBox,predicate=legitieconomy:job/delivery_uuid] at @s if data entity @s data.command run function legitieconomy:job/delivery/run_command with entity @s data
+tag @s remove .temp
+
 tp @s 0 64 0
 
 $execute store result storage k.temp:temp coins int 1 run random value $(reward)

@@ -1,0 +1,36 @@
+{
+    "condition": "all_of",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": {
+                    "Tags": [
+                        "le.deliveryStarter"
+                    ]
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": {
+                    "interaction": {}
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": {
+                    "data":{
+                        "le.selectiveDelivery":{}
+                    }
+                }
+            }
+        }
+    ]
+}

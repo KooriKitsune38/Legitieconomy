@@ -22,6 +22,7 @@ scoreboard objectives add amount trigger
 scoreboard objectives add le.farmingJob dummy
 scoreboard objectives add le.deliveryUUIDs dummy
 scoreboard objectives add le.death custom:deaths
+scoreboard objectives add le.neoParkour dummy {text:"Neo Parkour Wins",color:"yellow"}
 
 scoreboard players set .2 Legiticoins 2
 scoreboard players set .beggingDuration le.beggingTimer 201

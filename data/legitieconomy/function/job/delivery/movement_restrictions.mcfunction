@@ -20,13 +20,13 @@ execute if predicate legitieconomy:is_riding run return run function legitiecono
 execute unless dimension overworld run return run function legitieconomy:job/delivery/end_delivery
 execute if items entity @s armor.* *[glider={}] run return run function legitieconomy:job/delivery/end_delivery
 execute store result score $jump_height k.Values run attribute @s jump_strength get 1000
-execute if score $jump_height k.Values matches 421.. run return run function legitieconomy:job/delivery/end_delivery
+execute if score $jump_height k.Values matches 421.. run return run function legitiguard:cleanse_ailments
 execute store result score $movement_speed k.Values run attribute @s movement_speed base get 100
-execute unless score $movement_speed k.Values matches 10 run return run function legitieconomy:job/delivery/end_delivery
+execute unless score $movement_speed k.Values matches 10 run return run function legitiguard:cleanse_ailments
 execute store result score $scale k.Values run attribute @s scale get 10
-execute unless score $scale k.Values matches 10 run return run function legitieconomy:job/delivery/end_delivery
+execute unless score $scale k.Values matches 10 run return run function legitiguard:cleanse_ailments
 execute store result score $gravity k.Values run attribute @s gravity get 1000
-execute if score $gravity k.Values matches ..79 run return run function legitieconomy:job/delivery/end_delivery
+execute if score $gravity k.Values matches ..79 run return run function legitiguard:cleanse_ailments
 execute if entity @s[nbt={active_effects:[{id:"minecraft:levitation"}]}] run return run function legitieconomy:job/delivery/end_delivery
 
 execute if block ~.3 ~ ~.3 #legitieconomy:water run return run function legitieconomy:job/delivery/end_delivery
