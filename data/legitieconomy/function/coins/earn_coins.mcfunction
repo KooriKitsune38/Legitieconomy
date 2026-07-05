@@ -1,3 +1,5 @@
+execute if entity @s[tag=le.noCoins] run return run title @s actionbar [{text:"",color:"dark_gray"},{text:"● ",color:"gray"},{text:"You can't collect coins!",color:"red"},{text:" ●",color:"gray"}]
+
 $scoreboard players add @s Legiticoins $(coins)
 $scoreboard players set .tempCoins Legiticoins $(coins)
 
