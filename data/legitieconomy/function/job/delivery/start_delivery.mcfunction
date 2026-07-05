@@ -4,6 +4,7 @@ execute if score @s le.deliveryUUIDs matches -2147483648..2147483647 run return 
 
 gamemode adventure @s
 clear @s
+tag @s add le.deliveryDelay
 
 tellraw @s " "
 tellraw @s [{text:"| ",color:"dark_gray"},{"text":"Read the item's lore for the delivery info.","color":"blue"}]

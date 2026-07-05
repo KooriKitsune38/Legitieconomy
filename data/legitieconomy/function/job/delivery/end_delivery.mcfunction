@@ -2,7 +2,6 @@ scoreboard players reset @s le.deliveryUUIDs
 clear @s *[custom_data~{le.deliveryItem:true}]
 execute if items entity @s player.cursor *[custom_data~{le.deliveryItem:true}] run item replace entity @s player.cursor with air
 tag @s remove can_take_damage
-tag @s add le.deliveryDelay
 
 tellraw @s [{text:"| ",color:"dark_gray"},{"text":"Delivery ended!","color":"blue"}]
 
