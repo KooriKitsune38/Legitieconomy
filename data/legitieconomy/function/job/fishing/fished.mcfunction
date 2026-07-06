@@ -1,5 +1,7 @@
 advancement revoke @s only legitieconomy:fished
 
+return fail
+
 execute unless entity @s[tag=le.canFish] run return run tag @s remove le.canFish
 
 tag @s remove le.canFish

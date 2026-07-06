@@ -23,25 +23,8 @@
                                 }
                             },
                             {
-                                "condition": "any_of",
-                                "terms": [
-                                    {
-                                        "condition": "entity_properties",
-                                        "entity": "this",
-                                        "predicate": {
-                                            "nbt": {
-                                                "Tags": [
-                                                    "hasExtraTools",
-                                                    "canUseTools"
-                                                ]
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "condition": "reference",
-                                        "name": "legitiguard:staff_member"
-                                    }
-                                ]
+                                "condition": "reference",
+                                "name": "legitiguard:staff_member"
                             }
                         ]
                     }

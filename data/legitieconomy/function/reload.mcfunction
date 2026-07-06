@@ -23,6 +23,7 @@ scoreboard objectives add le.farmingJob dummy
 scoreboard objectives add le.deliveryUUIDs dummy
 scoreboard objectives add le.death custom:deaths
 scoreboard objectives add le.neoParkour dummy {text:"Neo Parkour Wins",color:"yellow"}
+scoreboard objectives add le.winLimit dummy
 
 scoreboard players set .2 Legiticoins 2
 scoreboard players set .beggingDuration le.beggingTimer 201
@@ -43,3 +44,4 @@ schedule function legitieconomy:coins/legitichest/rotation_schedule 5s replace
 schedule function legitieconomy:coins/pet/validate_schedule 30s replace
 
 schedule function legitieconomy:job/farming/crop_schedule 60s replace
+schedule function legitieconomy:job/delivery/win_limiter 300s replace
