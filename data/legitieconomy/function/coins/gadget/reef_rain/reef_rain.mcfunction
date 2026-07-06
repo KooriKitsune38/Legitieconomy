@@ -1,3 +1,5 @@
+execute unless entity @p[predicate=legitieconomy:in_overworld] run return fail
+
 execute unless score .reefRain le.gadgetValues matches ..0 run schedule function legitieconomy:coins/gadget/reef_rain/reef_rain 1s replace
 
 execute at @a run particle dust_pillar{block_state:{Name:"gold_block"}} ~ ~20 ~ 10 1 10 1 20 normal

@@ -27,8 +27,8 @@ effect give @a[predicate=legitieconomy:job/on_farmland] slow_falling 1 0 true
 execute as @a[scores={le.deliveryUUIDs=-2147483648..},predicate=legitieconomy:half_second] run function legitieconomy:job/delivery/deliverying
 tag @a[predicate=legitieconomy:10_seconds] remove le.deliveryDelay
 
-execute as @e[type=fishing_bobber] at @s unless block ~ ~-.2 ~ #legitieconomy:water on origin run tag @s remove le.canFish
-execute as @e[type=fishing_bobber] at @s if block ~ ~-.2 ~ #legitieconomy:water on origin run tag @s add le.canFish
+execute as @e[type=fishing_bobber,predicate=!legitieconomy:job/hook_water] on origin run tag @s remove le.canFish
+execute as @e[type=fishing_bobber,predicate=legitieconomy:job/hook_water] on origin run tag @s add le.canFish
 
 # Leave
 execute as @a[scores={le.leave=1..}] run function legitieconomy:left

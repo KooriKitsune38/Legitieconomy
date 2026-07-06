@@ -6,6 +6,7 @@ gamemode adventure @s
 clear @s
 tag @s add le.deliveryDelay
 tag @s add .deliveryTemp
+execute as @e[type=ender_pearl] at @s on origin if entity @s[tag=.deliveryTemp] run kill @n[type=ender_pearl,distance=..0.1]
 
 tellraw @s " "
 tellraw @s [{text:"| ",color:"dark_gray"},{"text":"Read the item's lore for the delivery info.","color":"blue"}]
