@@ -9,4 +9,5 @@ tellraw @s [{text:"| ",color:"dark_gray"},{text:"You left the raffle.",color:"bl
 
 execute at @s run playsound minecraft:block.note_block.harp player @a ~ ~ ~ 1 1.6
 
+scoreboard players reset @s sort_winner
 scoreboard players reset @s leave_raffle
