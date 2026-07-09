@@ -1,6 +1,7 @@
 advancement revoke @s only legitieconomy:leave_raffle
 
 execute if score @s le.raffleCoins matches -2147483648.. unless score @s le.raffleCoins matches -1 run scoreboard players operation @s Legiticoins += @s le.raffleCoins
+execute if score @s le.raffleCoins matches -2147483648.. unless score @s le.raffleCoins matches -1 run scoreboard players operation @n[type=interaction,tag=le.Shop,tag=le.raffleShop,predicate=legitieconomy:raffle/match_uuid] le.raffleCoins -= @s le.raffleCoins
 scoreboard players reset @s le.raffleCoins
 scoreboard players reset @s le.raffleUUIDs
 tag @s remove le.raffleHost
