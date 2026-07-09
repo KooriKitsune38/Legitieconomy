@@ -8,7 +8,7 @@ execute on attacker run scoreboard players enable @s raffle
 execute on attacker unless score @s Legiticoins matches ..0 if score @s raffle > @s Legiticoins run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You can't set the raffle bigger than your coins!",color:"red"}]
 
 execute on attacker unless score @s raffle matches 1.. run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"raffle\" to set the prize.",color:"green"}]
-execute on attacker unless score @s price matches 1.. run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"price\" to set the entry cost. (-1 for free entry)",color:"green"}]
+execute on attacker unless score @s price matches 1.. unless score @s price matches -1 run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"price\" to set the entry cost. (-1 for free entry)",color:"green"}]
 
 execute on attacker unless score @s raffle matches 1.. if score @s raffle <= @s Legiticoins run return run tellraw @s [{text:"\n| ",color:"dark_gray"},{text:"It will get coins from your balance and set it as the prize.",color:"green"},{text:"\n| ",color:"dark_gray"},{text:"If you leave all coins will go back to you and the raffle will end.",color:"green"}]
 execute on attacker unless score @s price matches -1 unless score @s price matches 1.. run return run tellraw @s [{text:"\n| ",color:"dark_gray"},{text:"It will get coins from your balance and set it as the prize.",color:"green"},{text:"\n| ",color:"dark_gray"},{text:"If you leave all coins will go back to you and the raffle will end.",color:"green"}]
@@ -18,6 +18,7 @@ execute on attacker run function legitieconomy:raffle/raffle_host
 scoreboard players operation @s le.raffleUUIDs = @p[tag=.temp] k.UUIDs
 execute store result storage k.temp:temp prize int 1 run scoreboard players operation @s le.rafflePrize = @p[tag=.temp] le.raffleCoins
 
+scoreboard players operation .temp k.UUIDs = @s k.UUIDs
 execute as @n[type=text_display,predicate=legitieconomy:match_uuid] run function legitieconomy:raffle/set_text
 
 execute store result entity @s data.shopData.price int 1 store result storage k.temp:temp string int 1 run scoreboard players get @p[tag=.temp] price

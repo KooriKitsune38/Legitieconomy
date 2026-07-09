@@ -18,4 +18,6 @@ data modify entity @s data.shopData.owner set value ""
 data modify entity @s CustomName.extra[0].text set value "Null"
 data modify entity @s CustomName.extra[1].text set value "$"
 data modify entity @s data.shopData.price set value 0
+
+scoreboard players operation .temp k.UUIDs = @s k.UUIDs
 data modify entity @n[type=text_display,predicate=legitieconomy:match_uuid] text.extra[0].text set value "0"
