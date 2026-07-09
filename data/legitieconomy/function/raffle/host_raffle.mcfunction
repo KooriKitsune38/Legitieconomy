@@ -11,7 +11,7 @@ execute on attacker unless score @s raffle matches 1.. run tellraw @s [{text:"| 
 execute on attacker unless score @s price matches 1.. run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"price\" to set the entry cost. (-1 for free entry)",color:"green"}]
 
 execute on attacker unless score @s raffle matches 1.. if score @s raffle <= @s Legiticoins run return run tellraw @s [{text:"\n| ",color:"dark_gray"},{text:"It will get coins from your balance and set it as the prize.",color:"green"},{text:"\n| ",color:"dark_gray"},{text:"If you leave all coins will go back to you and the raffle will end.",color:"green"}]
-execute on attacker unless score @s price matches 1.. run return run tellraw @s [{text:"\n| ",color:"dark_gray"},{text:"It will get coins from your balance and set it as the prize.",color:"green"},{text:"\n| ",color:"dark_gray"},{text:"If you leave all coins will go back to you and the raffle will end.",color:"green"}]
+execute on attacker unless score @s price matches -1 unless score @s price matches 1.. run return run tellraw @s [{text:"\n| ",color:"dark_gray"},{text:"It will get coins from your balance and set it as the prize.",color:"green"},{text:"\n| ",color:"dark_gray"},{text:"If you leave all coins will go back to you and the raffle will end.",color:"green"}]
 
 execute on attacker run function legitieconomy:raffle/raffle_host
 

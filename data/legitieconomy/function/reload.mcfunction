@@ -20,6 +20,8 @@ scoreboard objectives add confirm trigger
 scoreboard objectives add amount trigger
 
 scoreboard objectives add raffle trigger
+scoreboard objectives add leave_raffle trigger
+scoreboard objectives add sort_winner trigger
 scoreboard objectives add le.raffleCoins dummy
 scoreboard objectives add le.rafflePrize dummy
 scoreboard objectives add le.raffleUUIDs dummy
