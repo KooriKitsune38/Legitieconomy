@@ -1,9 +1,9 @@
 execute if data entity @s data.shopData.item.id at @s run return run function legitieconomy:shop/remove_item
 
 execute on target run scoreboard players enable @s[gamemode=creative] amount
-execute on target unless score @s amount matches 1.. run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"amount\" to set how many items are sold at once.",color:"green"}]
+execute on target unless score @s price matches 1.. unless score @s amount matches 1.. run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"amount\" to set how many items are sold at once.",color:"green"}]
 execute on target run scoreboard players enable @s[gamemode=creative] stock
-execute on target if score @s stock matches ..0 unless score @s stock matches -1 run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"stock\" to set the stored amount for the item (-1 for infinite).",color:"green"}]
+execute on target unless score @s price matches 1.. if score @s stock matches ..0 unless score @s stock matches -1 run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"stock\" to set the stored amount for the item (-1 for infinite).",color:"green"}]
 execute on target run scoreboard players enable @s price
 execute on target unless score @s price matches 1.. unless score @s price matches -1 run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"price\" to set the price for the item, then click again. (-1 for free item)",color:"green"}]
 

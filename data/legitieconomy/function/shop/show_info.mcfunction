@@ -1,3 +1,5 @@
+execute if entity @p[tag=.temp,predicate=legitieconomy:sneaking] if entity @s[tag=le.raffleShop] run return run function legitieconomy:raffle/host_raffle
+
 execute if entity @p[tag=.temp,predicate=legitieconomy:match_uuid,predicate=legitieconomy:sneaking] run return run function legitieconomy:shop/unclaim
 
 tellraw @p[tag=.temp] [{text:"__/--",color:"dark_gray"},{text:"LegitiShop",color:"gold"},{text:"--\\__",color:"dark_gray"}]

@@ -1,8 +1,13 @@
 tag @s add .temp
+
 scoreboard players operation .temp k.UUIDs = @s k.UUIDs
+execute store result score .price Legiticoins run data get entity @s data.shopData.price
 
 # Attack
 execute if data entity @s attack run return run function legitieconomy:shop/show_info
+
+# Raffle Shop
+execute if entity @s[tag=le.raffleShop] run return run function legitieconomy:raffle/join_raffle
 
 # Interaction
 execute store result score .temp Legiticoins if entity @e[type=item,predicate=legitieconomy:no_tags]
@@ -17,7 +22,6 @@ execute if entity @p[tag=.temp,predicate=legitieconomy:match_uuid] run return ru
 execute unless data entity @s data.shopData.item on target run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"There's no item breh",color:"red"}]
 
 #execute on target if score @s Legiticoins matches ..0 run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enought coinz",color:"red"}]
-execute store result score .price Legiticoins run data get entity @s data.shopData.price
 execute on target if score @s Legiticoins < .price Legiticoins run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You don't have enought coinz",color:"red"}]
 
 execute on target run scoreboard players operation @s Legiticoins -= .price Legiticoins

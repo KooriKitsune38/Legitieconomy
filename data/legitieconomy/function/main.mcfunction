@@ -17,7 +17,7 @@ execute as @a[scores={le.petCode=-2147483648..2147483647}] at @s run function le
 execute at @e[type=item_display,tag=le.Pet,tag=le.petEvilReef,predicate=legitieconomy:half_second] run particle small_flame ~ ~ ~ .1 .1 .1 0.005 5 normal
 
 # Shops
-scoreboard players reset @s[scores={confirm=-2147483648..},predicate=legitieconomy:10_seconds] confirm
+scoreboard players reset @s[scores={confirm=-2147483648..},predicate=legitieconomy:10_seconds,predicate=!legitieconomy:raffle/host] confirm
 tag @a[predicate=legitieconomy:half_second,tag=le.cantShop] remove le.cantShop
 
 # Jobs
@@ -29,6 +29,9 @@ tag @a[predicate=legitieconomy:10_seconds] remove le.deliveryDelay
 
 execute as @e[type=fishing_bobber,predicate=!legitieconomy:job/hook_water] on origin run tag @s remove le.canFish
 execute as @e[type=fishing_bobber,predicate=legitieconomy:job/hook_water] on origin run tag @s add le.canFish
+
+# Raffle
+effect give @a[scores={le.raffleCoins=-2147483648..}] glowing 1 0 true
 
 # Leave
 execute as @a[scores={le.leave=1..}] run function legitieconomy:left

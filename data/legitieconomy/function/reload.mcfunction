@@ -19,6 +19,11 @@ scoreboard objectives add stock trigger
 scoreboard objectives add confirm trigger
 scoreboard objectives add amount trigger
 
+scoreboard objectives add raffle trigger
+scoreboard objectives add le.raffleCoins dummy
+scoreboard objectives add le.rafflePrize dummy
+scoreboard objectives add le.raffleUUIDs dummy
+
 scoreboard objectives add le.farmingJob dummy
 scoreboard objectives add le.deliveryUUIDs dummy
 scoreboard objectives add le.death custom:deaths
@@ -45,3 +50,5 @@ schedule function legitieconomy:coins/pet/validate_schedule 30s replace
 
 schedule function legitieconomy:job/farming/crop_schedule 60s replace
 schedule function legitieconomy:job/delivery/win_limiter 300s replace
+
+schedule function legitieconomy:raffle/check_schedule 10s replace

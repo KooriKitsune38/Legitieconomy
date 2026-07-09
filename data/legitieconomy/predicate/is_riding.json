@@ -19,6 +19,23 @@
                     }
                 }
             }
+        },
+        {
+            "condition": "inverted",
+            "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "vehicle": {
+                        "type":"horse",
+                        "nbt":{
+                            "Tags":[
+                                "lift"
+                            ]
+                        }
+                    }
+                }
+            }
         }
     ]
 }

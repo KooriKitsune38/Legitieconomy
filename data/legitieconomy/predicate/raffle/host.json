@@ -1,0 +1,14 @@
+{
+    "condition": "entity_properties",
+    "entity": "this",
+    "predicate": {
+        "vehicle": {
+            "type":"interaction",
+            "nbt": {
+                "Tags": [
+                    "le.raffleSeat"
+                ]
+            }
+        }
+    }
+}

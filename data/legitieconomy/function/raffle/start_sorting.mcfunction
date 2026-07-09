@@ -1,0 +1,2 @@
+scoreboard players operation .temp le.raffleUUIDs = @s le.raffleUUIDs
+execute as @n[type=interaction,tag=le.Shop,tag=le.raffleShop,predicate=legitieconomy:raffle/match_uuid] at @s run function legitieconomy:raffle/select_winner

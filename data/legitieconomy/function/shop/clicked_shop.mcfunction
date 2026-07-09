@@ -9,5 +9,5 @@ tag @s add le.cantShop
 
 tag @s add .temp
 execute as @n[type=interaction,predicate=legitieconomy:valid_shop] run function legitieconomy:shop/parse_information
-execute as @n[type=interaction,predicate=legitieconomy:valid_shop,tag=.temp] run function legitieconomy:shop/clear_interaction
+execute as @e[type=interaction,predicate=legitieconomy:valid_shop,tag=.temp] run function legitieconomy:shop/clear_interaction
 tag @s remove .temp

@@ -1,5 +1,3 @@
-scoreboard players reset @s le.leave
-
 tag @s[tag=.temp] remove le.noPet
 execute if entity @s[tag=le.noPet] run return fail
 execute if score @s le.petCode matches 1 run function legitieconomy:coins/pet/_spawn {pet:"blahaj"}

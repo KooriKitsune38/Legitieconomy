@@ -2,6 +2,13 @@ scoreboard players reset @s le.leave
 scoreboard players reset @s price
 scoreboard players reset @s stock
 scoreboard players reset @s amount
+scoreboard players reset @s raffle
+
+execute as @a[tag=le.raffleHost] if score @s le.raffleCoins matches -2147483648.. run scoreboard players operation @s Legiticoins += @s le.raffleCoins
+scoreboard players reset @s le.raffleCoins
+scoreboard players reset @s le.raffleUUIDs
+tag @s remove le.raffleHost
+
 tag @s remove can_take_damage
 tag @s remove le.canFish
 

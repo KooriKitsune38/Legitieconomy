@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "trigger":{
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type":"interaction",
+                    "nbt":{
+                        "Tags":[
+                            "le.seat"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "legitieconomy:seat/sit_down"
+    }
+}
