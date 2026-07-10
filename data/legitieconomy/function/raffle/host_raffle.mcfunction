@@ -26,6 +26,9 @@ data modify entity @s CustomName.extra[0].text set string storage k.temp:temp st
 
 execute if score @p[tag=.temp] price matches -1 run data merge entity @s {data:{shopData:{price:0}},CustomName:[{text:"Price: ",color:"light_purple"},{text:"Free!",color:"aqua"},{text:"",color:"aqua"}]}
 
+execute store result entity @s data.shopData.sellAmount int 1 store result storage k.temp:temp string int 1 run scoreboard players get @p[tag=.temp] raffle
+
+scoreboard players reset @p[tag=.temp] raffle
 scoreboard players reset @p[tag=.temp] price
 
 execute as @p[tag=.temp] run loot spawn ~ ~ ~ loot legitieconomy:player_head

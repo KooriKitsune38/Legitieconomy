@@ -9,7 +9,6 @@ scoreboard players operation @s le.raffleUUIDs = @s k.UUIDs
 
 title @a[distance=..16] actionbar [{"selector":"@s","color":"light_purple"},{"text":" has started a raffle, prize: "},{"score":{"name":"@s","objective":"raffle"},"color":"aqua"},{"color":"aqua","text":"$"}]
 
-scoreboard players reset @s raffle
 scoreboard players enable @s leave_raffle
 scoreboard players enable @s sort_winner
 

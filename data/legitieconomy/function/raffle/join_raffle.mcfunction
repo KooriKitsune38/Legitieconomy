@@ -9,6 +9,8 @@ execute on target run tellraw @s [{text:"| ",color:"dark_gray"},{text:"You joine
 execute on target run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Leaving the game (not by trigger) will lose you coins!",color:"red"}]
 
 execute on target run scoreboard players enable @s leave_raffle
+execute on target run scoreboard players reset @s raffle
+execute on target run scoreboard players reset @s price
 
 scoreboard players operation @p[tag=.temp] le.raffleUUIDs = @s le.raffleUUIDs
 execute on target run scoreboard players operation @s le.raffleCoins = .price Legiticoins

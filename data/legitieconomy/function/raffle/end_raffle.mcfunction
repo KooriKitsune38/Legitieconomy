@@ -5,8 +5,8 @@ scoreboard players operation .temp le.raffleUUIDs = @s le.raffleUUIDs
 tellraw @a[predicate=legitieconomy:raffle/match_uuid] [{text:"| ",color:"dark_gray"},{text:"The raffle ended",color:"blue"}]
 
 scoreboard players reset @a[predicate=legitieconomy:raffle/match_uuid] le.raffleCoins
-scoreboard players reset @a[predicate=legitieconomy:raffle/match_uuid] le.raffleUUIDs
 tag @a[predicate=legitieconomy:raffle/match_uuid,tag=le.raffleHost] remove le.raffleHost
+scoreboard players reset @a[predicate=legitieconomy:raffle/match_uuid] le.raffleUUIDs
 
 scoreboard players reset @s le.raffleUUIDs
 scoreboard players reset @s le.raffleCoins
