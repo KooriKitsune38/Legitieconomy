@@ -1,5 +1,5 @@
 execute on attacker run scoreboard players enable @s confirm
-execute on attacker unless score @s confirm matches 1.. run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"confirm\" if you're sure, then left click again.",color:"aqua"}]
+execute on attacker unless score @s confirm matches 1.. run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"confirm\" to unclaim the shop, then left click again.",color:"aqua"}]
 
 function legitieconomy:shop/remove_item
 scoreboard players reset @s k.UUIDs
