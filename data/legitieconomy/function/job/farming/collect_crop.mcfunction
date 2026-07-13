@@ -1,3 +1,4 @@
+return fail
 function legitieconomy:job/farming/replant_crop
 particle block{block_state:{Name:"wheat",Properties:{age:"7"}}} ~ ~ ~ .25 .25 .25 1 10 normal
 playsound block.crop.break block @a ~ ~ ~ 1 1

@@ -33,6 +33,10 @@ execute as @e[type=fishing_bobber,predicate=legitieconomy:job/hook_water] on ori
 # Raffle
 effect give @a[scores={le.raffleCoins=-2147483648..}] glowing 1 0 true
 
+# Misc
+execute as @a[predicate=legitieconomy:seatable] align y unless entity @n[type=interaction,tag=le.seat,dy=1] unless entity @n[type=text_display,tag=le.tempSeat,dy=1] run function legitieconomy:seat/summon_seat
+kill @e[type=text_display,tag=le.tempSeat,predicate=!legitieconomy:has_passengers]
+
 # Leave
 execute as @a[scores={le.leave=1..}] run function legitieconomy:left
 

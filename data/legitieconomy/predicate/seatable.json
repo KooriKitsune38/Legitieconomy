@@ -1,0 +1,35 @@
+{
+    "condition": "all_of",
+    "terms": [
+        {
+            "condition": "location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "#stairs"
+                }
+            }
+        },
+        {
+            "condition": "inverted",
+            "term": {
+                "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "vehicle": {}
+            }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type_specific": {
+                    "type": "player",
+                    "input": {
+                        "jump": true
+                    }
+                }
+            }
+        }
+    ]
+}
