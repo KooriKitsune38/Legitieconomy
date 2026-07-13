@@ -1,1 +1,1 @@
-$tellraw @p[tag=.temp] [{text:"Item: ",color:"yellow"},[{interpret:true,nbt:"data.shopData.item.id",color:"aqua",entity:"@s",hover_event:{action:"show_item",id:"$(id)",components:$(components),count:$(count)}},{text:" (Hover for info)",color:"white"}],"\n"]
+$tellraw @p[tag=.temp] [{text:"",color:"white"},{text:"Item: ",color:"yellow"},[{interpret:true,nbt:"data.shopData.item.id",color:"aqua",entity:"@s",hover_event:{action:"show_item",id:"$(id)",components:$(components),count:$(count)}},{text:" (Hover for info)",color:"white"}],"\n"]

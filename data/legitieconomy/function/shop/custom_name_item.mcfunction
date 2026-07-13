@@ -1,1 +1,3 @@
-$execute if data entity @s data.shopData.item.components."minecraft:custom_name" run return run tellraw @p[tag=.temp] [{text:"Item: ",color:"yellow"},[{text:"",hover_event:{action:"show_item",id:"$(id)",components:$(components),count:$(count)}},$(custom_name),{text:" (Hover for info)",color:"white"}],"\n"]
+execute unless data entity @s data.shopData.item.components."minecraft:custom_name".text run return run function legitieconomy:shop/complex_name_item with entity @s data.shopData.item
+
+$tellraw @p[tag=.temp] [{text:"",color:"white"},{text:"Item: ",color:"yellow"},[{text:"",hover_event:{action:"show_item",id:"$(id)",components:$(components),count:$(count)}},'$(custom_name)',{text:" (Hover for info)",color:"white"}],"\n"]

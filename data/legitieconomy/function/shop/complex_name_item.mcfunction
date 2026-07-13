@@ -1,0 +1,1 @@
+$tellraw @p[tag=.temp] [{text:"",color:"white"},{text:"Item: ",color:"yellow"},[{text:"",hover_event:{action:"show_item",id:"$(id)",components:$(components),count:$(count)}},$(custom_name),{text:" (Hover for info)",color:"white"}],"\n"]
