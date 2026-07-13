@@ -5,42 +5,8 @@
             "conditions": {
                 "player": [
                     {
-                        "condition": "all_of",
-                        "terms": [
-                            {
-                                "condition": "entity_properties",
-                                "entity": "this",
-                                "predicate": {
-                                    "location": {
-                                        "block": {
-                                            "blocks": "#stairs"
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "condition": "inverted",
-                                "term": {
-                                    "condition": "entity_properties",
-                                    "entity": "this",
-                                    "predicate": {
-                                        "vehicle": {}
-                                    }
-                                }
-                            },
-                            {
-                                "condition": "entity_properties",
-                                "entity": "this",
-                                "predicate": {
-                                    "type_specific": {
-                                        "type": "player",
-                                        "input": {
-                                            "jump": true
-                                        }
-                                    }
-                                }
-                            }
-                        ]
+                        "condition": "reference",
+                        "name": "legitieconomy:seatable"
                     }
                 ]
             }
