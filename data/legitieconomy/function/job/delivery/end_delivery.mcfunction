@@ -3,6 +3,8 @@ clear @s *[custom_data~{le.deliveryItem:true}]
 execute if items entity @s player.cursor *[custom_data~{le.deliveryItem:true}] run item replace entity @s player.cursor with air
 tag @s remove can_take_damage
 
+tp @s 0 64 0
+
 tellraw @s [{text:"| ",color:"dark_gray"},{"text":"Delivery ended!","color":"blue"}]
 
 execute at @s run playsound entity.bat.takeoff player @a ~ ~ ~ 1 2

@@ -17,7 +17,7 @@ execute as @a[scores={le.petCode=-2147483648..2147483647}] at @s run function le
 execute at @e[type=item_display,tag=le.Pet,tag=le.petEvilReef,predicate=legitieconomy:half_second] run particle small_flame ~ ~ ~ .1 .1 .1 0.005 5 normal
 
 # Shops
-scoreboard players reset @s[scores={confirm=-2147483648..},predicate=legitieconomy:10_seconds,predicate=!legitieconomy:raffle/host] confirm
+scoreboard players reset @s[scores={confirm=-2147483648..},predicate=legitieconomy:10_seconds] confirm
 tag @a[predicate=legitieconomy:half_second,tag=le.cantShop] remove le.cantShop
 
 # Jobs

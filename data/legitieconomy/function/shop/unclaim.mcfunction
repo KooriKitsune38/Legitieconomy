@@ -1,3 +1,4 @@
+scoreboard players reset @s confirm
 execute on attacker run scoreboard players enable @s confirm
 execute on attacker unless score @s confirm matches 1.. run return run tellraw @s [{text:"| ",color:"dark_gray"},{text:"Trigger \"confirm\" if you're sure, then left click again.",color:"aqua"}]
 
