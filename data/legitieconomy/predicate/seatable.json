@@ -2,10 +2,13 @@
     "condition": "all_of",
     "terms": [
         {
-            "condition": "location_check",
+            "condition": "entity_properties",
+            "entity": "this",
             "predicate": {
-                "block": {
-                    "blocks": "#stairs"
+                "location": {
+                    "block":{
+                        "blocks": "#stairs"
+                    }
                 }
             }
         },
