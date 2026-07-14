@@ -12,8 +12,10 @@ You can edit this or fork it, if you have changes or additions you want to do yo
 
 <h4> Fixes & Tweaks </h4>
 
-- [ ] Make raffle display players
 - [x] No tags predicate not working for items for some reason
+- [ ] Add check for nearby dispensers in farming job
+- [ ] Make raffle display players
+
 
 <h4> Additions </h4>
 
