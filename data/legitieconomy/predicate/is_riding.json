@@ -15,7 +15,7 @@
                 "entity": "this",
                 "predicate": {
                     "vehicle": {
-                        "type":"minecart"
+                        "entity_type":"minecart"
                     }
                 }
             }
@@ -27,7 +27,7 @@
                 "entity": "this",
                 "predicate": {
                     "vehicle": {
-                        "type":"horse",
+                        "entity_type":"horse",
                         "nbt":{
                             "Tags":[
                                 "lift"

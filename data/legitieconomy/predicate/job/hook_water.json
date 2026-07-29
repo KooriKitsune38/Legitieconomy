@@ -3,7 +3,7 @@
     "entity": "this",
     "predicate": {
         "type_specific": {
-            "type": "fishing_hook",
+            "entity_type": "fishing_hook",
             "in_open_water": true
         }
     }
