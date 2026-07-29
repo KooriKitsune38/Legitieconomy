@@ -9,7 +9,7 @@ execute as @e[type=interaction,tag=le.beggarInteraction] if data entity @s inter
 execute at @e[type=item_display,tag=k.hasCoin,tag=k.treasureChest] run particle wax_on ~ ~.5 ~ .3 .3 .3 0 1 normal
 
 # Reef Rain
-execute as @e[type=item,tag=le.reefDrop,predicate=legitieconomy:on_ground] at @s run function legitieconomy:coins/gadget/reef_rain/explode_reef
+execute as @e[type=item,tag=le.reefDrop,predicate=legitieconomy:on_ground,scores={le.Entity=1}] at @s run function legitieconomy:coins/gadget/reef_rain/explode_reef
 
 # Pets
 execute as @a[scores={le.petCode=-2147483648..2147483647}] at @s run function legitieconomy:coins/pet/has_pet
