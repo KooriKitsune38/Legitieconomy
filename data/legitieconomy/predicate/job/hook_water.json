@@ -1,10 +1,9 @@
 {
-    "condition": "entity_properties",
-    "entity": "this",
-    "predicate": {
-        "type_specific": {
-            "entity_type": "fishing_hook",
-            "in_open_water": true
-        }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "minecraft:type_specific/fishing_hook": {
+      "in_open_water": true
     }
+  }
 }
