@@ -4,7 +4,7 @@
             "rolls":1,
             "entries": [
                 {
-                    "entity_type": "item",
+                    "type": "item",
                     "name": "player_head",
                     "functions": [
                         {

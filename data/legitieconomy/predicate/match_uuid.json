@@ -2,24 +2,24 @@
     "condition": "value_check",
     "range": {
         "min": {
-            "entity_type":"score",
+            "type":"score",
             "score":"k.UUIDs",
             "target": {
-                "entity_type": "fixed",
+                "type": "fixed",
                 "name": ".temp"
             }
         },
         "max": {
-            "entity_type":"score",
+            "type":"score",
             "score":"k.UUIDs",
             "target": {
-                "entity_type": "fixed",
+                "type": "fixed",
                 "name": ".temp"
             }
         }
     },
     "value": {
-        "entity_type": "score",
+        "type": "score",
         "score":"k.UUIDs",
         "target": "this"
     }
