@@ -12,3 +12,5 @@ execute at @s run function legitieconomy:coins/earn_coins with storage k.temp:te
 execute at @s run function legitieconomy:job/delivery/end_delivery
 
 tellraw @s [{text:"| ",color:"dark_gray"},{"text":"Delivery completed!","color":"green"}]
+
+scoreboard players add @s le.deliveriesCompleted 1

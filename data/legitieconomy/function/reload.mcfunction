@@ -28,6 +28,8 @@ scoreboard objectives add le.raffleUUIDs dummy
 
 scoreboard objectives add le.farmingJob dummy
 scoreboard objectives add le.deliveryUUIDs dummy
+scoreboard objectives add le.deliveriesCompleted dummy
+
 scoreboard objectives add le.death custom:deaths
 scoreboard objectives add le.neoParkour dummy {text:"Neo Parkour Wins",color:"yellow"}
 scoreboard objectives add le.winLimit dummy
